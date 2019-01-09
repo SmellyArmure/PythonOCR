@@ -39,15 +39,15 @@ def MetUneCapitale(uneListe):
 
 
 print("Bonjour à vous," + ChoixAuHasard(MetUneCapitale(characters)) + ".")
-print("C'est {personnage} qui a dit : {citation}".format(personnage=characters[0],citation=quotes[0]))
 
-# rep = "\n"
-# while rep!="B":
-# 	rep=input("Taper entrée pour une nouvelle citation ou B pour quitter :  \n")
-# 	if rep == "":
-# 		print(ChoixAuHasard(quotes))
-# 	else:
-# 		"--> mauvaise réponse...on reboucle"
-# print("Merci, au-revoir")
-# "coucou"
-# input("--------FIN--------")
+rep = "\n"
+while rep!="B":
+	rep=input("Taper entrée pour une nouvelle citation ou B pour quitter : ")
+	if rep == "":
+		print("C'est {personnage} qui a dit : {citation}".format(personnage=ChoixAuHasard(characters),citation=ChoixAuHasard(quotes)))
+		#print("C'est {} qui a dit : {}".format(ChoixAuHasard(characters),ChoixAuHasard(quotes))) # en plus condensé
+	else:
+		"--> mauvaise réponse...on reboucle"
+print("Merci, au-revoir")
+"coucou"
+input("--------FIN--------")
