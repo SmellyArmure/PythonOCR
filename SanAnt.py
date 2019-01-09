@@ -22,8 +22,6 @@ characters = [
     "Kirikou",
 ]
 
-villes = "paris et marseille"
-
 def ChoixAuHasard(uneListe):
 	return uneListe[random.randint(0, len(uneListe)-1)]
 
@@ -40,9 +38,8 @@ def MetUneCapitale(uneListe):
 	return uneListe
 
 
-print("Bonjour à vous," + ChoixAuHasard(characters) + ".")
-print(characters)
-print(MetUneCapitale(characters))
+print("Bonjour à vous," + ChoixAuHasard(MetUneCapitale(characters)) + ".")
+print("C'est {personnage} qui a dit : {citation}".format(personnage=characters[0],citation=quotes[0]))
 
 # rep = "\n"
 # while rep!="B":
