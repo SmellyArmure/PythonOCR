@@ -1,3 +1,4 @@
+# commentaires préliminaires
 # -*- coding: utf8 -*-
 import random
 quotes = [
