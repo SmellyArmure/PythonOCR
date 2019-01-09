@@ -10,27 +10,47 @@ quotes = [
 ]
 
 characters = [
-    "alvin et les Chipmunks", 
+    "alvin et les Chipmunks",
     "Babar", 
-    "betty boop", 
-    "calimero", 
+    "betty boop",
+    12,
+    "calimero",
+    ["bonjour", "bonsoir"],
     "casper", 
     "le chat potté", 
-    "Kirikou"
+    3,
+    "Kirikou",
 ]
+
+villes = "paris et marseille"
 
 def ChoixAuHasard(uneListe):
 	return uneListe[random.randint(0, len(uneListe)-1)]
 
-print("Bonjour à vous," + ChoixAuHasard(characters) + ".")
+def MetUneCapitale(uneListe):
+	i=0
+	for element in uneListe:
+		if isinstance(element, str):
+			uneListe[i]=uneListe[i].capitalize()
+			#element=element.capitalize() : ne marche pas !!!
+		else:
+			uneListe[i]="chaîne n°"+str(i)
+			print("ATTENTION l'élément n°" + str(i) + " N'ETAIT PAS UNE CHAINE mais un" + str(type(element)))
+		i+=1
+	return uneListe
 
-rep = "\n"
-while rep!="B":
-	rep=input("Taper entrée pour une nouvelle citation ou B pour quitter :  \n")
-	if rep == "":
-		print(ChoixAuHasard(quotes))
-	else:
-		"--> mauvaise réponse...on reboucle"
-print("Merci, au-revoir")
-"coucou"
-input("--------FIN--------")
+
+print("Bonjour à vous," + ChoixAuHasard(characters) + ".")
+print(characters)
+print(MetUneCapitale(characters))
+
+# rep = "\n"
+# while rep!="B":
+# 	rep=input("Taper entrée pour une nouvelle citation ou B pour quitter :  \n")
+# 	if rep == "":
+# 		print(ChoixAuHasard(quotes))
+# 	else:
+# 		"--> mauvaise réponse...on reboucle"
+# print("Merci, au-revoir")
+# "coucou"
+# input("--------FIN--------")
