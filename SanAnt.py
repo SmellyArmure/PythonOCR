@@ -18,14 +18,19 @@ characters = [
     "le chat potté", 
     "Kirikou"
 ]
-print("Bonjour à vous," + characters[random.randint(0,len(characters)-1)] + ".")
+
+def ChoixAuHasard(uneListe):
+	return uneListe[random.randint(0, len(uneListe)-1)]
+
+print("Bonjour à vous," + ChoixAuHasard(characters) + ".")
 
 rep = "\n"
 while rep!="B":
 	rep=input("Taper entrée pour une nouvelle citation ou B pour quitter :  \n")
 	if rep == "":
-		print(quotes[random.randint(0, len(quotes)-1)])
+		print(ChoixAuHasard(quotes))
 	else:
 		"--> mauvaise réponse...on reboucle"
 print("Merci, au-revoir")
+"coucou"
 input("--------FIN--------")
