@@ -1,3 +1,4 @@
+# Ceci est un commentaire dans la branche Master
 # -*- coding: utf8 -*-
 import random
 quotes = [
